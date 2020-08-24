@@ -1,0 +1,5 @@
+1 24 "resource\windows.manifest"
+
+1           ICON        "resource\Taskpanel.ico"
+
+LOGO        BITMAP     "resource\logo.bmp"

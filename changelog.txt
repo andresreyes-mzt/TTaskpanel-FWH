@@ -1,0 +1,56 @@
+// -------------------------------------------------------
+//   ChangeLog
+// -------------------------------------------------------
+
+2010-08-06  14:26 UTC -07:00 AndresReyes andresreyes_mzt/at/yahoo.com.mx
+   * source\h_ttaskpanel.prg -> source\h_ctaskpanel.prg
+      renombrado a h_ctaskpanel.prg y modificado el nombre de la clase a
+      CTaskpanel
+   + source\h_ttaskpanel.prg
+      clase TTaskpanel heredada de CTaskpanel
+   * source\h_ttaskgroup.prg -> source\h_ctaskgroup.prg
+      renombrado a h_ctaskgroup.prg y modificado el nombre de la clase a
+      CTaskPanelGroup
+   + source\h_ttaskgroup.prg
+      clase TTaskPanelGroup heredada de CTaskpanel
+   * source\h_ttaskitem.prg -> source\h_ctaskitem.prg
+      renombrado a h_ctaskgroup.prg y modificado el nombre de la clase a
+      CTaskItem
+   + source\h_ttaskitem.prg
+      classe TTaskitem heredada de CTaskitem
+   * source\ttaskpanel.prg
+   * source\h_ctaskpanel.prg
+   * source\h_ctaskgroup.prg
+      cambiado :classname == ""  por  :IsKinfdOf( "" )
+   ^^---- Cambios sugeridos por Carlos Mora ----^^
+
+
+
+2010-07-05  14:42 UTC -07:00 AndresReyes andresreyes_mzt/at/yahoo.com.mx
+   * source\taskpanel.prg
+   * source\h_ttaskpanel.prg
+   * source\h_ttaskgroup.prg
+   * source\h_ttaskitem.prg
+      TTaskpanel presentaba retraso al mostrarse en ventanas MDI Child
+      fue corregido y ahora el retraso es minimo.
+   * test\testmdi2.prg
+      + agregado ejemplo de uso de TTaskpanel + xbrowse en una venta MDI Child
+
+2010-07-04  22:14 UTC -07:00 AndresReyes andresreyes_mzt/at/yahoo.com.mx
+   * source\h_ttaskpanel.prg
+      - METHOD DoLayout()
+        modificado para funcionar con versiones anteriores de fivewin
+        probado con FWH 7.12
+   * source\h_ttaskgroup.prg
+      + METHOD Move( nTop, nLeft, nWidth, nHeight, lRepaint )
+        redefinido en esta clase para funcionar con versiones anteriores de
+        fivewin - Bug Reportado por Aida
+      + METHOD GoNextCtrl( hCtrl )
+      + METHOD GoPrevCtrl( hCtrl )
+        No permite salir del get al presionar enter - Bug reportado por Ariel
+   * source\h_ttaskitem.prg
+      + METHOD KeyChar( nKey, nFlags )
+
+
+2010-07-01  22:47 UTC -07:00 AndresReyes andresreyes_mzt/at/yahoo.com.mx
+   * Version Inicial

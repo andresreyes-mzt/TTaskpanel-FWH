@@ -1,0 +1,45 @@
+# -----------------------------------------------------------
+#   How to build the library
+# -----------------------------------------------------------
+
+You need to modify the path of your C compiler & Narbour compiler
+inside the file "makefile"
+
+To build the library, run
+
+   win-make
+
+to rebuild the library, run
+
+   win-make -B
+
+with this you'll recompile completely the files prg, and the library
+will be updated.
+
+If you have any trouble, visit the forum and post
+
+visita: http://codigo-base.el-foro.net
+
+Note: I still learning english, sorry for any mistake
+
+# -----------------------------------------------------------
+#   Como construir la libreria 
+# -----------------------------------------------------------
+
+Necesitas modificar las rutas de tu compilador C y compilador 
+harbour dentro del archivo "makefile.
+
+Para compilar la libreria, ejecuta
+
+   win-make
+
+Para reconstruir la liberia, ejecuta
+
+   win-make -B
+
+Con esto recompilaras completamente los archios prg y se actualizara
+la libreria
+
+si tienes algun problema 
+
+visita: http://codigo-base.el-foro.net

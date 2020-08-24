@@ -1,0 +1,18 @@
+1 24 "resource\windows.manifest"
+
+1           ICON        "resource\Taskpanel.ico"
+
+WATERMARK   BITMAP32    "resource\watermark.bmp"
+
+HEADER1     BITMAP32    "resource\Header1.bmp"
+ICON1       BITMAP32    "resource\Bitmap1.bmp"
+ICON2       BITMAP32    "resource\Bitmap2.bmp"
+ICON3       BITMAP32    "resource\Bitmap3.bmp"
+ICON4       BITMAP32    "resource\Bitmap4.bmp"
+ICON5       BITMAP32    "resource\Bitmap5.bmp"
+ICON6       BITMAP32    "resource\Bitmap6.bmp"
+ICON7       BITMAP32    "resource\Bitmap7.bmp"
+ICON8       BITMAP32    "resource\Bitmap8.bmp"
+ICON9       BITMAP32    "resource\Bitmap9.bmp"
+ICON10      BITMAP32    "resource\Bitmap10.bmp"
+ICON11      BITMAP32    "resource\Bitmap11.bmp"

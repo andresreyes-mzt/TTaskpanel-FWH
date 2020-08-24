@@ -1,0 +1,73 @@
+/**************************************************************************************************
+* Project      : TTaskpanel
+* File         : h_TExplorerBar.c
+*
+* Copyright 2010 Andres Reyes Hernandez - <andresreyes_mzt/at/yahoo.com.mx>
+* http://codigo-base.blogspot.com
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2, or (at your option)
+* any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this software; see the file LICENCIA. If not, write to
+* the Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+* Boston, MA 02111-1307 USA (or visit the web site http://www.gnu.org/).
+*
+* As a special exception, the TTaskpanel Project gives permission for
+* additional uses of the text contained in its release of TTaskpanel.
+*
+* The exception is that, if you link the TTaskpanel libraries with other
+* files to produce an executable, this does not by itself cause the
+* resulting executable to be covered by the GNU General Public License.
+* Your use of that executable is in no way restricted on account of
+* linking the TTaskpanel library code into it.
+*
+* This exception does not however invalidate any other reasons why
+* the executable file might be covered by the GNU General Public License.
+*
+* This exception applies only to the code released by the TTaskpanel
+* Project under the name TTaskpanel.  If you copy code from other
+* TTaskpanel Project or Free Software Foundation releases into a copy of
+* TTaskpanel, as the General Public License permits, the exception does
+* not apply to the code that you add in this way.  To avoid misleading
+* anyone as to the status of such modified files, you must delete
+* this exception notice from them.
+*
+* If you write modifications of your own for TTaskpanel, it is your choice
+* whether to permit this exception to apply to your modifications.
+* If you do not wish that, delete this exception notice.
+*
+***************************************************************************************************/
+//----------------------------------------------------------------------------//
+
+#include "fivewin.ch"
+
+//----------------------------------------------------------------------------//
+
+CLASS TExplorerBar FROM TTaskPanel
+
+   METHOD New( oWnd )         INLINE Super:New( "#XPNORMALCOLOR",,,,,, oWnd )
+   METHOD AddPanel( cPrompt ) INLINE Super:AddGroup( cPrompt )
+
+END CLASS
+
+//----------------------------------------------------------------------------//
+
+INIT PROCEDURE Commpatibility
+
+   LOCAL o
+
+   LoadTheme_XPNORMALCOLOR()
+
+   o := TTaskPanelGroup()
+   __ObjAddInline( o, "AddLink", {|Self,cPrompt,bAction,cBitmap| Self:AddTask( cPrompt, cBitmap, bAction ) } )
+   __ObjAddInline( o, "_cHtmlText", {|Self,cText| Self:AddInfo( cText ) } )
+
+   RETURN

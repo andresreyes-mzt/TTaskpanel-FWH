@@ -1,0 +1,3 @@
+
+7z u -tzip -r0 "TTaskPanel for FWH v1.0-Win32.zip" -ir!tests\*.prg -ir!tests\*.rc -ir!lib\*.lib -ir!include\*.ch -ir!manual\*.pdf -ir!source\*.prg  -ir!resource\*.bmp -ir!resource\*.ico -ir!resource\*.manifest -ir!.\makefile -ir!rules.mak -ir!win-make.exe -ir!changelog.txt -ir!howto.txt -ir!license.txt
+7z u -tzip -r0 "TTaskPanel for FWH v1.0-Win32-Samples-Bin.zip" -ir!bin\xharbour\bcc\*.exe -ir!bin\xharbour\bcc\*.dll
